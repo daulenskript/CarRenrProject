@@ -1,3 +1,5 @@
+package Modele;
+
 public class Car {
     private int Id;
     private int Year;
@@ -17,7 +19,7 @@ public class Car {
     }
 
     public void setId(int id) {
-        Id = id;
+        this.Id = id;
     }
 
 
@@ -26,7 +28,7 @@ public class Car {
     }
 
     public void setYear(int year) {
-        Year = year;
+        this.Year = year;
     }
 
 
@@ -35,7 +37,7 @@ public class Car {
     }
 
     public void setBrand(String brand) {
-        Brand = brand;
+        this.Brand = brand;
     }
 
 
@@ -44,7 +46,7 @@ public class Car {
     }
 
     public void setModel(String model) {
-        Model = model;
+        this.Model = model;
     }
 
 
@@ -53,7 +55,7 @@ public class Car {
     }
 
     public void setColor(String color) {
-        Color = color;
+        this.Color = color;
     }
 
 
@@ -61,7 +63,7 @@ public class Car {
         return Price;
     }
     public void setPrice(String price) {
-        Price = price;
+        this.Price = price;
     }
 
 

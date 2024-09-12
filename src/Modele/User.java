@@ -1,3 +1,5 @@
+package Modele;
+
 public abstract class User {
     private int Id;
     private String Name;
@@ -16,7 +18,7 @@ public abstract class User {
     }
 
     public void setId(int id) {
-        Id = id;
+        this.Id = id;
     }
 
 
@@ -25,7 +27,7 @@ public abstract class User {
     }
 
     public void setName(String name) {
-        Name = name;
+        this.Name = name;
     }
 
 
@@ -34,7 +36,7 @@ public abstract class User {
     }
 
     public void setLstName(String lstName) {
-        LstName = lstName;
+        this.LstName = lstName;
     }
 
 
@@ -43,7 +45,7 @@ public abstract class User {
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.Password = password;
     }
 
 
@@ -52,7 +54,7 @@ public abstract class User {
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.Email = email;
     }
 
 
@@ -61,7 +63,7 @@ public abstract class User {
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.Phone = phone;
     }
 
     public abstract void ShowList();
