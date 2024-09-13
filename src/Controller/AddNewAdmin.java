@@ -4,9 +4,16 @@ import Modele.Database;
 import Modele.Operation;
 import Modele.User;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddNewAdmin implements Operation {
+
+
     @Override
     public void operation(Database database, Scanner scanner, User user) {
         System.out.println("Please enter the name of the admin");
@@ -29,6 +36,12 @@ public class AddNewAdmin implements Operation {
             ConfirmPassword = scanner.next();
         }
         int accType = 1;
-
+        try{
+           ResultSet rs = database.getStatement().executeQuery("SELECT COUNT(*)");
+           rs.next();
+           int ID = rs.getInt("COUNT(*)");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

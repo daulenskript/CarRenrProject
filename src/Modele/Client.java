@@ -1,12 +1,14 @@
 package Modele;
 
+import java.util.Scanner;
+
 public class Client extends User{
     public Client(){
         super();
     }
 
     @Override
-    public void ShowList() {
+    public void ShowList(Database database , Scanner scanner) {
         System.out.println("1.View cars");
         System.out.println("2.Modele.Rent rents");
         System.out.println("3.Return Modele.Car");
