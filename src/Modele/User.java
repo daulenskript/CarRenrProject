@@ -3,7 +3,7 @@ package Modele;
 public abstract class User {
     private int Id;
     private String Name;
-    private String LstName;
+    private String LastName;
     private String Password;
     private String Email;
     private String Phone;
@@ -31,12 +31,12 @@ public abstract class User {
     }
 
 
-    public String getLstName() {
-        return LstName;
+    public String getLastName() {
+        return LastName;
     }
 
-    public void setLstName(String lstName) {
-        this.LstName = lstName;
+    public void setLastName(String lastName) {
+        this.LastName = lastName;
     }
 
 
