@@ -10,7 +10,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Login {
-    public Login(Database database , Scanner scanner) {
+    public static  void main(String[] args) {
+        Database database = new Database();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome bro: ");
         System.out.println("Enter Email: ");
         String email = scanner.next();
         System.out.println("Enter Password: ");
@@ -54,5 +57,12 @@ public class Login {
         }catch (Exception e) {
             System.out.println(e);
         }
+        for (User user : users) {
+            if(user.getPassword().equals(password) && user.getEmail().equals(email)) {
+                System.out.println("Welcome to car rent sys");
+                user.ShowList(database  , scanner);
+            }
+    }
+
     }
 }
