@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AddNewAdmin implements Operation {
+public class AddNewClient implements Operation {
 
 
     @Override
@@ -35,18 +35,18 @@ public class AddNewAdmin implements Operation {
             System.out.println("Please confirm Password of the admin");
             ConfirmPassword = scanner.next();
         }
-        int accType = 1;
+        int accType = 0;
         try{
-           ResultSet rs = database.getStatement().executeQuery("SELECT COUNT(*)");
-           rs.next();
-           int ID = rs.getInt("COUNT(*)");
+            ResultSet rs = database.getStatement().executeQuery("SELECT COUNT(*)");
+            rs.next();
+            int ID = rs.getInt("COUNT(*)");
             String insert = "INSERT INTO `Users`" +
                     "(`Id`, `Name`, `LastName`, `Password`, `Email`, `Phone`, `Type`)" +
                     " VALUES " +
                     "('"+ID+"','"+FirstName+"','"+LastName+"','"+Email+"','"+Phone+"'," +
                     "'"+Password+"','"+accType+"')";
             database.getStatement().executeUpdate(insert);
-            System.out.println("Admin added");
+            System.out.println("Client added");
         } catch (SQLException e) {
             e.printStackTrace();
         }
