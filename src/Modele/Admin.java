@@ -22,5 +22,6 @@ public void ShowList(Database database , Scanner scanner) {
 
         int i = scanner.nextInt();
         operations[i].operation(database , scanner ,this);
+        ShowList(database , scanner);
     }
 }

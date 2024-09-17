@@ -13,12 +13,16 @@ public class Login {
     public static  void main(String[] args) {
         Database database = new Database();
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Welcome bro: ");
         System.out.println("Enter Email: ");
         String email = scanner.next();
         System.out.println("Enter Password: ");
         String password = scanner.next();
-
+        if (email.equals("-1")){
+            System.out.println("Invalid Email");
+            return;
+        }
         ArrayList<User> users = new ArrayList<>();
 
         try {
@@ -42,8 +46,8 @@ public class Login {
                         user = new Admin();
                         break;
                     default:
-                        user = new Client();
-                        break;
+                        System.out.println("Email or Password doesn`t exist");
+                        return;
                 }
                 user.setId(id);
                 user.setName(firstName);
@@ -57,12 +61,17 @@ public class Login {
         }catch (Exception e) {
             System.out.println(e);
         }
+        boolean loggedIn = false;
         for (User user : users) {
             if(user.getPassword().equals(password) && user.getEmail().equals(email)) {
                 System.out.println("Welcome to car rent sys");
+                loggedIn = true;
                 user.ShowList(database  , scanner);
             }
     }
+        if (!loggedIn) {
+            System.out.println("Invalid Email or Password");
+        }
 
     }
 }
