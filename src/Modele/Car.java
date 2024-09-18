@@ -71,8 +71,8 @@ public class Car {
         return avaible;
     }
 
-    public void setAvaible(int avaible) {
-        this.avaible = avaible;
+    public void setAvaible(int avaibles) {
+        this.avaible = avaibles;
     }
 
 
