@@ -7,7 +7,7 @@ public class Car {
     private String Model;
     private String Color;
     private String Price;
-    private boolean avaible;
+    private int avaible;
 
     public Car(){
 
@@ -67,11 +67,11 @@ public class Car {
     }
 
 
-    public boolean isAvaible() {
+    public int isAvaible() {
         return avaible;
     }
 
-    public void setAvaible(boolean avaible) {
+    public void setAvaible(int avaible) {
         this.avaible = avaible;
     }
 
